@@ -1,0 +1,17 @@
+- content_id = @content[:id]
+.modal.fade{ :id => "#{content_id}", tabindex: "-1", role: "dialog", 'aria-labelledby' => "myModalLabel", 'aria-hidden' => "true" }
+  .modal-dialog
+    .modal-content
+      .modal-header
+      %button.close{ type: "button", 'data-dismiss' => "modal" }
+        %span{ 'aria-hidden' => "true"}
+          &times;
+        %span.sr-only
+          Close<
+      %h4.modal-title
+        = @content[:title]
+      .modal-body
+        = render partial: @content[:location]
+      .modal-footer
+        %button.btn.btn-default{type: "button", 'data-dismiss' => "modal"}
+          Close
