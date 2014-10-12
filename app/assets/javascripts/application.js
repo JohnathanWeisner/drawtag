@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require raphael-min
 //= require bootstrap-sprockets
+//= require raphael-min
 //= require_tree .
